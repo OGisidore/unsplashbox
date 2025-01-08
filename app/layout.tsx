@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className=" no-scrollbar">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} dark`}
+        className={`${geistSans.variable} ${geistMono.variable}  bg-background text-foreground  `}
       >
         <Header/>
         {children}

@@ -26,7 +26,12 @@ export default {
         secondaryForeground: "var(--secondary-foreground)",
         tertiaryBackground: "var(--tertiary-background)",
         tertiaryForeground: "var(--tertiary-foreground)",
+        border: "var(--border)",
       },
+    height: {
+      headerscreenminusheader: "calc(100vh - 64px)",
+      hfullminux16 : "calc(100vh - 9rem)",
+    },
     },
   },
   plugins: [require("tailwindcss-animate")],
