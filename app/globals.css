@@ -14,25 +14,25 @@
   --secondary-foreground: #6C727F;
   --tertiary-background: #E5E7EBCC;
   --tertiary-foreground: #6C727F;
-  --border: #1F2937CC;
+  --border: #68616350;
 }
 
 .dark {
   --background: #121826;
   --foreground: #FFFFFF;
-  --secondary-background: #1F2937;
+  --secondary-background: #457ece;
   --secondary-foreground: #9CA3AF;
   --tertiary-background: #1F2937CC;
   --tertiary-foreground: #9CA3AF;
   --border: #6C727F;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 
 body {

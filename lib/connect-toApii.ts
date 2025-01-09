@@ -13,7 +13,7 @@ const unsplashApi = axios.create({
 export const getPhotos = async (query: string) => {
     try {
         const response = await unsplashApi.get('/search/photos', {
-            params: { query, per_page: 8 },
+            params: { query, per_page: 20 },
         });
         return response.data;
     } catch (error) {
@@ -28,6 +28,17 @@ export const postPhoto = async (photoData: any) => {
         return response.data;
     } catch (error) {
         console.error('Error posting photo:', error);
+        throw error;
+    }
+};
+
+// get image details by slug
+export const getImageDetails = async (slug: string) => {
+    try {
+        const response = await unsplashApi.get(`/photos/${slug}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching image details:', error);
         throw error;
     }
 };

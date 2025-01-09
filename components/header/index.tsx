@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         }
     ];
     return (
-        <header className="z-full bg-background text-foreground sticky top-0 dark:shadow-md border-b border-border/80 p-4 flex items-center justify-between">
+        <header className="z-full  z-50 bg-background text-foreground sticky top-0 dark:shadow-md border-b border-border p-4 flex items-center justify-between">
             <div className='relative h-8 max-w-[180px]'>
                 <Link className='relative h-8 max-w-[180px]' href="/">
                     <Image src={"/Logo.svg"}
