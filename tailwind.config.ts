@@ -22,7 +22,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        secondaryBackground: "var(--secondary-background)",
+        secondary: "var(--secondary-background)",
         secondaryForeground: "var(--secondary-foreground)",
         tertiaryBackground: "var(--tertiary-background)",
         tertiaryForeground: "var(--tertiary-foreground)",
