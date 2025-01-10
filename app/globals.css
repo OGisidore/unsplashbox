@@ -116,3 +116,16 @@ height: 15vh;
 
 
 /* } */
+
+.text-gradient1 {
+  background: linear-gradient(90deg, #FF00FF 0%, #FF0000 50%, #FF00FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #F2C593, #8A3282);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

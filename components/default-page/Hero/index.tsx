@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
                         searchImages();
                     }
                     }>
-                        <input type="text" onChange={(e) => setSearchQuery(e.target.value)} className="searchbar w-full h-10 bg-transparent border-0 outline-none" placeholder="Enter your keywords..." />
+                        <input type="text" name='query' onChange={(e) => setSearchQuery(e.target.value)} className="searchbar w-full h-10 bg-transparent border-0 outline-none" placeholder="Enter your keywords..." />
                         <button type="submit" className=''><CustomIcon name="Search" className=" p-2 cursor-pointer " /></button>
                     </form>
                 </div>

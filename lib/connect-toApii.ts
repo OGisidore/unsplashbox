@@ -42,3 +42,60 @@ export const getImageDetails = async (slug: string) => {
         throw error;
     }
 };
+
+// seach collections by query
+export const searchCollections = async (query: string) => {
+    try {
+        const response = await unsplashApi.get('/search/collections', {
+            params: { query, per_page: 20 },
+        });
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching collections:', error);
+        throw error;
+    }
+};
+
+// add photo to collection
+export const addPhotoToCollection = async (collectionId: string, photoId: string) => {
+    try {
+        const response = await unsplashApi.post(`/collections/${collectionId}/add`, { photo_id: photoId });
+        return response.data;
+    } catch (error) {
+        console.error('Error adding photo to collection:', error);
+        throw error;
+    }
+};
+
+// get all collections
+export const getCollections = async () => {
+    try {
+        const response = await unsplashApi.get('/collections', { params: { per_page: 12 } });
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching collections:', error);
+        throw error;
+    }
+};
+
+// get collection by id
+export const getCollection = async (id: string) => {
+    try {
+        const response = await unsplashApi.get(`/collections/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching collection:', error);
+        throw error;
+    }
+};
+
+// get collection photos by id
+export const getCollectionPhotos = async (id: string) => {
+    try {
+        const response = await unsplashApi.get(`/collections/${id}/photos`);        
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching collection photos:', error);
+        throw error;
+    }
+};
