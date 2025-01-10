@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { addPhotoToCollection, getImageDetails, searchCollections } from '@/lib/connect-toApii';
-import { useRouter, useParams } from 'next/navigation';
+import {  useParams } from 'next/navigation';
 import Image from 'next/image';
 import { ImageDetails } from '@/types/photo';
 import { Button } from '@/components/ui/button';

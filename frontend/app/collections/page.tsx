@@ -5,11 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 
-interface CollectionProps {
 
-}
 
-const CollectionPage: React.FC<CollectionProps> = () => {
+const CollectionPage = () => {
     const [collection, setCollection] = React.useState<any[]>([]);
     useEffect(() => {
         console.log(collection);
