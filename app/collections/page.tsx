@@ -40,6 +40,15 @@ const CollectionPage: React.FC<CollectionProps> = () => {
 
             </div>
             <div className='grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 mx-auto md:w-[90%]'>
+              
+                {collection.length === 0 && Array.from({ length: 30 }).map((_, index) => (
+                    <div key={index} className='animate-pulse rounded-lg bg-gray-300 h-64 w-full mb-7'>
+                        <div className="h-48 bg-gray-400 mb-4"></div>
+                        <div className="h-4 bg-gray-400 mb-2 w-1/3"></div>
+                        <div className="h-4 bg-gray-400 w-1/2"></div>
+                    </div>
+                ))}
+
                 {collection.map((item) => (
                     <Link href={"/collections/" + item.id} key={item.id} className='  rounded-lg'>
                         <div className="relative h-64 w-full mb-7">

@@ -70,7 +70,7 @@ export const addPhotoToCollection = async (collectionId: string, photoId: string
 // get all collections
 export const getCollections = async () => {
     try {
-        const response = await unsplashApi.get('/collections', { params: { per_page: 12 } });
+        const response = await unsplashApi.get('/collections', { params: { per_page: 120 } });
         return response.data;
     } catch (error) {
         console.error('Error fetching collections:', error);
